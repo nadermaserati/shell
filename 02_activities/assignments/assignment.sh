@@ -48,8 +48,9 @@ cp data/raw/*event*.log data/processed/event_logs/
 find . -type f -name "*ipaddr*" -delete
 
 # 8. Create a file named ./data/inventory.txt that lists all the files in the subfolders of ./data/processed
-find processed -type f | sort > inventory.txt
-cat inventory.txt
+touch data/inventory.txt
+find data/processed -type f | sort > data/inventory.txt
+cat data/inventory.txt
 
 
 
